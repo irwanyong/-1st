@@ -1,4 +1,5 @@
 import path from "node:path"
+
 import { neonConfig } from "@neondatabase/serverless"
 import { type Config, defineConfig } from "drizzle-kit"
 
@@ -10,13 +11,10 @@ export const drizzleConfig = {
     url: Bun.env.DATABASE ?? "",
   },
   dialect: "postgresql",
-  out: path
-    .resolve(import.meta.dir, "../../migrations")
-    // Fixed a wrong drizzle path from ".//" to "./"
-    .replace(/^\//, ""),
+  out: path.resolve(import.meta.dir, "../../migrations"),
   schema: path.resolve(
     import.meta.dir,
-    "../schema/schema.ts",
+    "./drizzle-schema.ts",
   ),
   verbose: true,
 } satisfies Config

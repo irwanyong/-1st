@@ -1,3 +1,3 @@
 import { Database } from "@/database/database"
 
-await Database.seed()
+await Database.reset()

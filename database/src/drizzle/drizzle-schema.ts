@@ -32,7 +32,7 @@ export const restaurants = t.pgTable("restaurants", {
     >()
     .default([]),
   id: identifierColumn,
-  location: t.point().notNull(), // @todo: do we need Country, City, etc?
+  location: t.point().notNull(), // @todo: Do we need a separate column for Country, City, etc?
   logoUrl: t.varchar({ length: 1024 }).notNull(),
   name: t.varchar({ length: 256 }).notNull(),
   ...timestampColumns,
@@ -101,6 +101,7 @@ export const restaurantMenuItems = t.pgTable(
         columns: [restaurantMenuItems.restaurantId],
         foreignColumns: [restaurants.id],
       })
-      .onDelete("cascade"),
+      .onDelete("cascade")
+      .onUpdate("cascade"),
   ],
 )

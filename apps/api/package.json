@@ -1,11 +1,14 @@
 {
   "name": "@1st/api",
+  "main": "src/index.ts",
   "scripts": {
-    "start": "bun run src/index.ts",
+    "start": "bun run src/start.ts",
+    "test": "bun test",
     "clean": "rm -rf node_modules"
   },
   "dependencies": {
     "@1st/dash": "workspace:*",
+    "@1st/database": "workspace:*",
     "@elysiajs/eden": "^1.4.3",
     "elysia": "^1.4.11"
   },

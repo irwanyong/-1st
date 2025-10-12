@@ -1,0 +1,246 @@
+{
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  },
+  "dialect": "postgresql",
+  "enums": {},
+  "id": "c3d2c1fa-23e9-4cf9-acec-09dc6f95387e",
+  "policies": {},
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "roles": {},
+  "schemas": {},
+  "sequences": {},
+  "tables": {
+    "public.restaurant_menu_items": {
+      "checkConstraints": {},
+      "columns": {
+        "created_at": {
+          "default": "now()",
+          "name": "created_at",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "timestamp"
+        },
+        "currency": {
+          "default": "'USD'",
+          "name": "currency",
+          "notNull": false,
+          "primaryKey": false,
+          "type": "varchar(3)"
+        },
+        "description": {
+          "name": "description",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "id": {
+          "default": "uuidv7()",
+          "name": "id",
+          "notNull": true,
+          "primaryKey": true,
+          "type": "uuid"
+        },
+        "image_url": {
+          "name": "image_url",
+          "notNull": false,
+          "primaryKey": false,
+          "type": "varchar(1024)"
+        },
+        "menu_id": {
+          "name": "menu_id",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "uuid"
+        },
+        "name": {
+          "name": "name",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "varchar(256)"
+        },
+        "price": {
+          "name": "price",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "numeric(10, 2)"
+        },
+        "restaurant_id": {
+          "name": "restaurant_id",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "uuid"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "notNull": false,
+          "primaryKey": false,
+          "type": "timestamp"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "foreignKeys": {
+        "restaurant_menu_items_menu_id_restaurant_menus_id_fk": {
+          "columnsFrom": ["menu_id"],
+          "columnsTo": ["id"],
+          "name": "restaurant_menu_items_menu_id_restaurant_menus_id_fk",
+          "onDelete": "cascade",
+          "onUpdate": "cascade",
+          "tableFrom": "restaurant_menu_items",
+          "tableTo": "restaurant_menus"
+        },
+        "restaurant_menu_items_restaurant_id_restaurants_id_fk": {
+          "columnsFrom": ["restaurant_id"],
+          "columnsTo": ["id"],
+          "name": "restaurant_menu_items_restaurant_id_restaurants_id_fk",
+          "onDelete": "cascade",
+          "onUpdate": "no action",
+          "tableFrom": "restaurant_menu_items",
+          "tableTo": "restaurants"
+        }
+      },
+      "indexes": {},
+      "isRLSEnabled": false,
+      "name": "restaurant_menu_items",
+      "policies": {},
+      "schema": "",
+      "uniqueConstraints": {}
+    },
+    "public.restaurant_menus": {
+      "checkConstraints": {},
+      "columns": {
+        "created_at": {
+          "default": "now()",
+          "name": "created_at",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "timestamp"
+        },
+        "description": {
+          "name": "description",
+          "notNull": false,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "id": {
+          "default": "uuidv7()",
+          "name": "id",
+          "notNull": true,
+          "primaryKey": true,
+          "type": "uuid"
+        },
+        "restaurant_id": {
+          "name": "restaurant_id",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "uuid"
+        },
+        "title": {
+          "name": "title",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "varchar(256)"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "notNull": false,
+          "primaryKey": false,
+          "type": "timestamp"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "foreignKeys": {
+        "restaurant_menus_restaurant_id_restaurants_id_fk": {
+          "columnsFrom": ["restaurant_id"],
+          "columnsTo": ["id"],
+          "name": "restaurant_menus_restaurant_id_restaurants_id_fk",
+          "onDelete": "cascade",
+          "onUpdate": "cascade",
+          "tableFrom": "restaurant_menus",
+          "tableTo": "restaurants"
+        }
+      },
+      "indexes": {},
+      "isRLSEnabled": false,
+      "name": "restaurant_menus",
+      "policies": {},
+      "schema": "",
+      "uniqueConstraints": {}
+    },
+    "public.restaurants": {
+      "checkConstraints": {},
+      "columns": {
+        "availability": {
+          "default": "'[]'::json",
+          "name": "availability",
+          "notNull": false,
+          "primaryKey": false,
+          "type": "json"
+        },
+        "created_at": {
+          "default": "now()",
+          "name": "created_at",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "timestamp"
+        },
+        "description": {
+          "name": "description",
+          "notNull": false,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "gallery": {
+          "default": "'[]'::json",
+          "name": "gallery",
+          "notNull": false,
+          "primaryKey": false,
+          "type": "json"
+        },
+        "id": {
+          "default": "uuidv7()",
+          "name": "id",
+          "notNull": true,
+          "primaryKey": true,
+          "type": "uuid"
+        },
+        "location": {
+          "name": "location",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "point"
+        },
+        "logo_url": {
+          "name": "logo_url",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "varchar(1024)"
+        },
+        "name": {
+          "name": "name",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "varchar(256)"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "notNull": false,
+          "primaryKey": false,
+          "type": "timestamp"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "foreignKeys": {},
+      "indexes": {},
+      "isRLSEnabled": false,
+      "name": "restaurants",
+      "policies": {},
+      "schema": "",
+      "uniqueConstraints": {}
+    }
+  },
+  "version": "7",
+  "views": {}
+}

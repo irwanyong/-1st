@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.2.5/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.2.6/schema.json",
   "assist": {
     "actions": {
       "recommended": true,
@@ -10,10 +10,14 @@
             "groups": [
               ":BUN:",
               ":NODE:",
+              ":BLANK_LINE:",
               [":PACKAGE:", "!@1st/**"],
               [":ALIAS:", "!@/**"],
+              ":BLANK_LINE:",
               ["@1st/**"],
+              ":BLANK_LINE:",
               ["@/**"],
+              ":BLANK_LINE:",
               [":PATH:", "!@1st/**", "!@/**"]
             ]
           }
