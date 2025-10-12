@@ -1,0 +1,24 @@
+import path from "node:path"
+import { neonConfig } from "@neondatabase/serverless"
+import { type Config, defineConfig } from "drizzle-kit"
+
+neonConfig.poolQueryViaFetch = true
+
+export const drizzleConfig = {
+  casing: "snake_case",
+  dbCredentials: {
+    url: Bun.env.DATABASE ?? "",
+  },
+  dialect: "postgresql",
+  out: path
+    .resolve(import.meta.dir, "../../migrations")
+    // Fixed a wrong drizzle path from ".//" to "./"
+    .replace(/^\//, ""),
+  schema: path.resolve(
+    import.meta.dir,
+    "../schema/schema.ts",
+  ),
+  verbose: true,
+} satisfies Config
+
+export default defineConfig(drizzleConfig)

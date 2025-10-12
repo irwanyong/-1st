@@ -1,0 +1,23 @@
+{
+  "name": "@1st/database",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "bun test ./src/**/*.test.ts",
+    "db:generate": "bunx --bun drizzle-kit generate --config=./src/drizzle/drizzle-config.ts",
+    "db:migrate": "bun ./src/scripts/migrate.ts",
+    "db:push": "bunx --bun drizzle-kit push --config=./src/drizzle/drizzle-config.ts",
+    "db:seed": "bun ./src/scripts/seed.ts",
+    "db:reset": "bun ./src/scripts/reset.ts",
+    "clean": "rm -rf node_modules"
+  },
+  "devDependencies": {
+    "bun-types": "^1.3.0",
+    "drizzle-kit": "^0.31.5",
+    "drizzle-seed": "^0.3.1"
+  },
+  "dependencies": {
+    "@1st/dash": "workspace:*",
+    "@neondatabase/serverless": "^1.0.2",
+    "drizzle-orm": "^0.44.6"
+  }
+}

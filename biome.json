@@ -1,0 +1,51 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.2.5/schema.json",
+  "assist": {
+    "actions": {
+      "recommended": true,
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              ":BUN:",
+              ":NODE:",
+              [":PACKAGE:", "!@1st/**"],
+              [":ALIAS:", "!@/**"],
+              ["@1st/**"],
+              ["@/**"],
+              [":PATH:", "!@1st/**", "!@/**"]
+            ]
+          }
+        },
+        "useSortedAttributes": "on",
+        "useSortedKeys": "on"
+      }
+    }
+  },
+  "files": {
+    "includes": [
+      "**",
+      "!**/package.json",
+      "!**/tsconfig.json"
+    ]
+  },
+  "formatter": {
+    "indentStyle": "space",
+    "lineWidth": 60
+  },
+  "javascript": {
+    "formatter": { "semicolons": "asNeeded" }
+  },
+  "linter": {
+    "rules": {
+      "recommended": true
+    }
+  },
+  "root": true,
+  "vcs": {
+    "clientKind": "git",
+    "enabled": true,
+    "useIgnoreFile": true
+  }
+}

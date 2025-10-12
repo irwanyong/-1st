@@ -1,0 +1,16 @@
+{
+  "name": "1st",
+  "scripts": {
+    "fmt": "biome format --write && biome lint --write --unsafe",
+    "bootstarp": "bun install",
+    "clean": "rm -rf node_modules && bun run --workspaces clean"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "database"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "2.2.5"
+  }
+}
