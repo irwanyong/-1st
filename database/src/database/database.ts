@@ -5,9 +5,9 @@ import * as DrizzleZod from "drizzle-zod"
 
 import { Fp } from "@1st/dash"
 
-import { drizzle } from "@/drizzle/drizzle"
-import { drizzleConfig } from "@/drizzle/drizzle-config"
-import * as schema from "@/drizzle/drizzle-schema"
+import { drizzle } from "../drizzle/drizzle"
+import { drizzleConfig } from "../drizzle/drizzle-config"
+import * as schema from "../drizzle/drizzle-schema"
 
 export const Database = {
   drizzle,

@@ -1,1 +1,1 @@
-export { Database } from "@/database/database"
+export { Database } from "./database/database"

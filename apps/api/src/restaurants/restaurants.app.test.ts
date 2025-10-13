@@ -10,7 +10,7 @@ import { treaty } from "@elysiajs/eden"
 
 import { Database } from "@1st/database"
 
-import { app } from "@/app"
+import { app } from "../app"
 
 const api = treaty(app)
 
