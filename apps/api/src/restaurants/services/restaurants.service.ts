@@ -1,12 +1,9 @@
 import { Database } from "@1st/database"
 
 const searchRestaurants = async () => {
-  console.log(
-    await Database.drizzle
-      .select()
-      .from(Database.schema.restaurants),
-  )
-  return []
+  return Database.drizzle
+    .select()
+    .from(Database.schema.restaurants)
 }
 
 export const RestaurantsService = {

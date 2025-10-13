@@ -1,9 +1,11 @@
 {
   "name": "1st",
   "scripts": {
-    "fmt": "biome check --write",
+    "format": "biome check --write --unsafe",
+    "lint": "biome check",
     "bootstrap": "bun install",
-    "clean": "rm -rf node_modules && bun run --workspaces clean"
+    "clean": "rm -rf node_modules && bun run --workspaces clean",
+    "prepare": "husky"
   },
   "workspaces": [
     "apps/*",
@@ -11,6 +13,7 @@
     "database"
   ],
   "devDependencies": {
-    "@biomejs/biome": "2.2.6"
+    "@biomejs/biome": "2.2.6",
+    "husky": "^9.1.7"
   }
 }
