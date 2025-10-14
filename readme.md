@@ -8,7 +8,7 @@ This guide provides the essential steps to set up and start developing the proje
 ## Toolchain
 - **Platform**: [Bun](https://bun.com/), [Neon](https://neon.com/), [Better Auth](https://www.better-auth.com/), [Pulumi](https://www.pulumi.com/)
 - **Backend**: [ElysiaJS](https://elysiajs.com/), [Drizzle ORM](https://orm.drizzle.team/)
-- **Frontend**: [React](https://react.dev/), [TanStack](https://tanstack.com/), [react-use](https://github.com/streamich/react-use)
+- **Frontend**: [React](https://react.dev/), [Next.js](https://nextjs.org/), [TanStack](https://tanstack.com/), [react-use](https://github.com/streamich/react-use), [Chakra UI](https://chakra-ui.com/)
 - **Utilities**: [Lodash](https://lodash.com/), [date-fns](https://date-fns.org/), [Type-Fest](https://github.com/sindresorhus/type-fest), [TypeScript](https://www.typescriptlang.org/)
 
 ## Setup Instructions

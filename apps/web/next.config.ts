@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     turbopackFileSystemCacheForDev: true,
   },
   reactCompiler: true,
+  serverExternalPackages: ["@1st/ui-toolkit"],
 }
 
 export default nextConfig

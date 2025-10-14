@@ -1,9 +1,16 @@
+"use client"
+
+import { Blockquote, Box } from "@1st/ui-toolkit"
+
 export default function Home() {
   return (
-    <div>
-      <main>
-        <h1>Web</h1>
-      </main>
-    </div>
+    <Box as="main">
+      <Blockquote.Root>
+        <Blockquote.Content cite="https://" />
+        <Blockquote.Caption>
+          <cite>Uzumaki Naruto</cite>
+        </Blockquote.Caption>
+      </Blockquote.Root>
+    </Box>
   )
 }

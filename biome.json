@@ -43,7 +43,10 @@
   },
   "linter": {
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "style": {
+        "useConsistentCurlyBraces": "error"
+      }
     }
   },
   "root": true,

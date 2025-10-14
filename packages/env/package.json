@@ -1,8 +1,7 @@
 {
   "name": "@1st/env",
-  "main": "src/env.ts",
+  "main": "src/index.ts",
   "scripts": {
-    "run": "bun run src/env.ts",
     "clean": "rm -rf node_modules"
   },
   "dependencies": {
