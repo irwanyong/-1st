@@ -23,18 +23,19 @@ brew install oven-sh/bun/bun
 bun bootstrap
 ```
 
-### 3. Configure Neon Database
-1. Create a database at [Neon Console](https://console.neon.tech/app/).
-2. Copy the environment file:
-   ```shell
-   cp database/.env.example database/.env
-   ```
-3. Edit `database/.env` and set the `DATABASE` variable with your Neon connection string:
-   ```env
-   DATABASE=postgres://<user>:<password>@<host>/<database>?sslmode=require
-   ```
+### 3. Configure Environment Variables
+- Development:
+```shell
+cp .env.example .env
+```
+- Testing:
+```shell
+cp .env.example .env.test
+```
 
 ### 4. Database Setup
+- Create a database at [Neon Console](https://console.neon.tech/app/).
+- Edit `.env` and set the `DATABASE` variable with your Neon connection string.
 - Apply migrations:
   ```shell
   bun run --filter "@1st/database" db:migrate
