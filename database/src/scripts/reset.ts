@@ -1,3 +1,3 @@
-import { Database } from "../database/database"
+import { reset } from "../drizzle/drizzle"
 
-await Database.reset()
+await reset()

@@ -1,3 +1,3 @@
-import { Database } from "../database/database"
+import { migrate } from "../drizzle/drizzle"
 
-await Database.migrate()
+await migrate()

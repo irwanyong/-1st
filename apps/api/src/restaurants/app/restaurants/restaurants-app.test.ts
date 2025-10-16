@@ -8,20 +8,20 @@ import {
 
 import { treaty } from "@elysiajs/eden"
 
-import { Database } from "@1st/database"
+import { reset, seed } from "@1st/database/drizzle"
 
-import { restaurantsApp } from "../../app/restaurants.app"
+import { restaurantsApp } from "./restaurants-app"
 
 const api = treaty(restaurantsApp)
 
 describe("Restaurant API", () => {
   afterEach(async () => {
-    await Database.reset()
+    await reset()
   })
 
   describe("when empty query", () => {
     beforeEach(async () => {
-      await Database.seed()
+      await seed()
     })
 
     test("should return restaurants", async () => {

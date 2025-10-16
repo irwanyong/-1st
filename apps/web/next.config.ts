@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     turbopackFileSystemCacheForDev: true,
   },
   reactCompiler: true,
-  transpilePackages: ["@1st/react-toolkit"],
+  transpilePackages: ["@1st/components", "@1st/dash"],
 }
 
 export default nextConfig

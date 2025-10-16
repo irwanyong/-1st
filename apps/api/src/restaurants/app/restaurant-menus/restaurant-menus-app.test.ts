@@ -2,15 +2,15 @@ import { afterEach, describe, expect, test } from "bun:test"
 
 import { treaty } from "@elysiajs/eden"
 
-import { Database } from "@1st/database"
+import { reset } from "@1st/database/drizzle"
 
-import { restaurantsApp } from "../../app/restaurants.app"
+import { restaurantsApp } from "../restaurants/restaurants-app"
 
 const api = treaty(restaurantsApp)
 
 describe("Restaurant Menus API", () => {
   afterEach(async () => {
-    await Database.reset()
+    await reset()
   })
 
   describe("when menu empty", () => {

@@ -20,6 +20,7 @@ export const restaurants = t.pgTable("restaurants", {
         endDate: Date
       }>
     >()
+    .notNull()
     .default([]),
   description: t.text(),
   gallery: t
@@ -30,6 +31,7 @@ export const restaurants = t.pgTable("restaurants", {
         createdAt: Date
       }>
     >()
+    .notNull()
     .default([]),
   id: identifierColumn,
   location: t.point().notNull(), // @todo: Do we need a separate column for Country, City, etc?

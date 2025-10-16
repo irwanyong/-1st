@@ -1,8 +1,9 @@
 {
   "name": "@1st/database",
-  "main": "src/index.ts",
+  "exports": {
+    "./drizzle": "./src/drizzle/drizzle.ts"
+  },
   "scripts": {
-    "test": "bun test src/**/*.test.ts",
     "db:generate": "bunx --bun drizzle-kit generate --config=src/drizzle/drizzle-config.ts",
     "db:migrate": "bun src/scripts/migrate.ts",
     "db:push": "bunx --bun drizzle-kit push --config=src/drizzle/drizzle-config.ts",
@@ -13,10 +14,14 @@
   "dependencies": {
     "@1st/dash": "workspace:*",
     "@1st/env": "workspace:*",
-    "@neondatabase/serverless": "^1.0.2",
-    "drizzle-orm": "^0.44.6",
-    "drizzle-zod": "^0.8.3",
-    "drizzle-kit": "^0.31.5",
-    "drizzle-seed": "^0.3.1"
+    "@neondatabase/serverless": "1.0.2",
+    "drizzle-orm": "0.44.6",
+    "drizzle-zod": "0.8.3",
+    "drizzle-seed": "0.3.1"
+  },
+  "devDependencies": {
+    "drizzle-kit": "0.31.5",
+    "bun-types": "catalog:runtime",
+    "@faker-js/faker": "10.1.0"
   }
 }
