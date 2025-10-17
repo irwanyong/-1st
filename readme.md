@@ -48,3 +48,47 @@ cp .env.example .env.test
   ```shell
   bun run --filter "@1st/database" db:reset
   ```
+
+## Development
+
+Start all apps in `dev` mode:
+```shell
+bun run --filter='./apps/*' dev
+```
+
+Start `api` in `dev` mode:
+```shell
+bun run --filter "@1st/api" dev
+```
+
+Start `web` in `dev` mode:
+```shell
+bun run --filter "@1st/web" dev
+```
+
+## Production
+
+### All At Once
+1. Build all apps
+```shell
+   bun run --filter='./apps/*' build
+```
+2. Start all apps in `prod` mode:
+```shell
+bun run --filter='./apps/*' start
+```
+
+### Individual Run
+
+1. Start `api` in `prod` mode:
+```shell
+bun run --filter "@1st/api" start
+```
+2. Build `web`
+```shell
+bun run --filter "@1st/web" build
+```
+3. Start `web` in `prod` mode:
+```shell
+bun run --filter "@1st/web" start
+```

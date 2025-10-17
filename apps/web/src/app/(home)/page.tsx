@@ -1,8 +1,8 @@
 import { VStack } from "@1st/components/chakra"
 
-import { searchRestaurants } from "@/api/restaurants/restaurants-api.ts"
-import { Restaurants } from "@/app/(home)/restaurants"
-import { RestaurantsFilter } from "@/app/(home)/restaurants-filter"
+import { searchRestaurants } from "@/api/restaurants/restaurants-api"
+import { RestaurantsFilter } from "@/app/(home)/components/filter/restaurants-filter"
+import { Restaurants } from "@/app/(home)/components/list/restaurants"
 
 export default async function Home(props: PageProps<"/">) {
   const query = await props.searchParams

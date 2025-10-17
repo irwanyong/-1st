@@ -1,10 +1,10 @@
 import type { z } from "@1st/dash/zod"
 import { drizzle, orm, schema } from "@1st/database/drizzle"
 
-import type { RestaurantsModel } from "../models/restaurants-model"
+import type { restaurantSearchQuerySchema } from "../models/restaurants-model.ts"
 
 export const searchRestaurants = (
-  search: z.infer<typeof RestaurantsModel.schema.query>,
+  search: z.infer<typeof restaurantSearchQuerySchema>,
 ) => {
   return drizzle
     .select()

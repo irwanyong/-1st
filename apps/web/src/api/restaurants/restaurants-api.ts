@@ -1,7 +1,7 @@
 import { isEmpty } from "@1st/dash"
 
 import type { SearchRestaurantsQuery } from "@/api/restaurants/restaurants-api-types"
-import { apiSDK } from "@/lib/api-utils"
+import { apiSDK } from "@/lib/api-sdk"
 
 export const searchRestaurants = async (
   query: SearchRestaurantsQuery = undefined,
