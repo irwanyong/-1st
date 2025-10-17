@@ -4,24 +4,24 @@ import {
   Input,
 } from "@1st/components/chakra"
 
-import { submitFilter } from "@/app/(home)/lib/filter-action"
 import { SubmitButton } from "@/components/submit-button"
 
 type RestaurantsFilterProps = {
-  query: {
+  defaultQuery: {
     search?: string
   }
+  onSubmit: (fromData: FormData) => void
 }
 
 export const RestaurantsFilter = (
   props: RestaurantsFilterProps,
 ) => {
   return (
-    <HStack align="stretch" asChild gap={2}>
-      <form action={submitFilter}>
+    <HStack align={"stretch"} asChild gap={2}>
+      <form action={props.onSubmit}>
         <Field.Root>
           <Input
-            defaultValue={props.query.search ?? ""}
+            defaultValue={props.defaultQuery.search ?? ""}
             name="search"
             placeholder="Search"
           />

@@ -1,1 +1,7 @@
-export * as Icons from "react-icons"
+export * from "react-icons"
+export * from "react-icons/bi"
+export * from "react-icons/fa"
+export * from "react-icons/lia"
+export * from "react-icons/lu"
+export * from "react-icons/md"
+export * from "react-icons/tb"
